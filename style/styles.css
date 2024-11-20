@@ -1,16 +1,39 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+:root{
+    --primary-color: #282828;
+    --secondary-color: #202020;
+    --tertairy-color: #747474;
+}
+body {
     height: 100vh;
     display: flex;
     justify-content: center;
-    background-color: #282828;
+    background-color: var(--primary-color);
+    align-items: center;
 }
-.clock{
+.clock {
     width: 350px;
     height: 350px;
-    box-shadow: inset 10px 10px 15px ;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("/images/clock.png");
+    background-size: cover;
+    box-shadow: inset 10px 10px 15px var(--secondary-color),
+    inset -10px -10px 15px var(--secondary-color);
+}
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    z-index: 4;
+    background: var(--tertairy-color);
 }
