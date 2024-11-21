@@ -3,7 +3,8 @@
     padding: 0;
     box-sizing: border-box;
 }
-:root{
+
+:root {
     --primary-color: #282828;
     --secondary-color: #202020;
     --tertairy-color: #747474;
@@ -12,6 +13,7 @@
     --sixth-color: #ffb510;
     --border-clock: 6px 6px 0 0;
 }
+
 body {
     height: 100vh;
     display: flex;
@@ -19,6 +21,7 @@ body {
     background-color: var(--primary-color);
     align-items: center;
 }
+
 .clock {
     width: 350px;
     height: 350px;
@@ -32,7 +35,8 @@ body {
     box-shadow: inset 10px 10px 15px var(--secondary-color),
     inset -10px -10px 15px var(--secondary-color);
 }
-.clock::before{
+
+.clock::before {
     content: "";
     position: absolute;
     width: 20px;
@@ -41,26 +45,31 @@ body {
     z-index: 4;
     background: var(--tertairy-color);
 }
+
 .clock .hour,
-.clock .min ,
+.clock .min,
 .clock .sec {
     position: absolute;
     display: flex;
     justify-content: center;
 }
-.clock .hour{
+
+.clock .hour {
     width: 160px;
     height: 160px;
 }
-.clock .min{
+
+.clock .min {
     width: 190px;
     height: 190px;
 }
-.clock .sec{
+
+.clock .sec {
     width: 230px;
     height: 230px;
 }
-.hour::before{
+
+.hour::before {
     content: "";
     position: absolute;
     width: 8px;
@@ -69,7 +78,8 @@ body {
     z-index: 1;
     border-radius: var(--border-clock);
 }
-.min::before{
+
+.min::before {
     content: "";
     position: absolute;
     width: 4px;
@@ -78,7 +88,8 @@ body {
     z-index: 2;
     border-radius: var(--border-clock);
 }
-.sec::before{
+
+.sec::before {
     content: "";
     position: absolute;
     width: 2px;
